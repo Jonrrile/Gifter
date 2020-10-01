@@ -137,11 +137,13 @@ namespace Gifter.Repositories
                 using (var cmd = conn.CreateCommand())
                 {
                     cmd.CommandText = @"
-                          SELECT Title, Caption, DateCreated, ImageUrl, UserProfileId
-                            FROM Post
-                           WHERE Id = @Id";
-
-                    DbUtils.AddParameter(cmd, "@Id", id);
+                          SELECT p.Id AS PostId, p.Title, p.Caption, p.DateCreated AS PostDateCreated, p.ImageUrl AS PostImageUrl, p.UserProfileId,
+                      
+                           up.Name, up.Bio, up.Email, up.DateCreated AS UserProfileDateCreated,
+                           up.ImageUrl AS UserProfileImageUrl
+                           FROM Post p
+                           LEFT JOIN UserProfile up ON p.UserProfileId = up.id";
+                           
 
                     var reader = cmd.ExecuteReader();
 
@@ -150,12 +152,20 @@ namespace Gifter.Repositories
                     {
                         post = new Post()
                         {
-                            Id = id,
+                            Id = DbUtils.GetInt(reader, "PostId"),
                             Title = DbUtils.GetString(reader, "Title"),
                             Caption = DbUtils.GetString(reader, "Caption"),
                             DateCreated = DbUtils.GetDateTime(reader, "DateCreated"),
                             ImageUrl = DbUtils.GetString(reader, "ImageUrl"),
                             UserProfileId = DbUtils.GetInt(reader, "UserProfileId"),
+                            UserProfile = new UserProfile()
+                            {
+                                Id = DbUtils.GetInt(reader, "UserProfileId"),
+                                Name = DbUtils.GetString(reader, "Name"),
+                                Email = DbUtils.GetString(reader, "Email"),
+                                DateCreated = DbUtils.GetDateTime(reader, "UserProfileDateCreated"),
+                                ImageUrl = DbUtils.GetString(reader, "UserProfileImageUrl"),
+                            },
                         };
                     }
 
