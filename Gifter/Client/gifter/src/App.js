@@ -8,6 +8,7 @@ function App() {
   return (
     <div className="App">
       <PostProvider>
+        <input type="search" placeholder="Search Posts" />
         <PostForm />
         <PostList />
       </PostProvider>
