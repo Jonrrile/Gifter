@@ -32,6 +32,30 @@ namespace Gifter.Controllers
             return Ok(post);
         }
 
+        [HttpGet("GetWithComments")]
+        public IActionResult GetWithComments()
+        {
+            var posts = _postRepository.GetAllWithComments();
+            return Ok(posts);
+        }
+
+        [HttpGet("GetWithComments/{id}")]
+        public IActionResult GetWithComments(int id)
+        {
+            var post = _postRepository.GetPostByIdWithComments(id);
+            if (post == null)
+            {
+                return NotFound();
+            }
+            return Ok(post);
+        }
+
+        [HttpGet("search")]
+        public IActionResult Search(string q, bool sortDesc)
+        {
+            return Ok(_postRepository.Search(q, sortDesc));
+        }
+
         [HttpPost]
         public IActionResult Post(Post post)
         {
@@ -56,12 +80,6 @@ namespace Gifter.Controllers
         {
             _postRepository.Delete(id);
             return NoContent();
-        }
-        [HttpGet("GetWithComments")]
-        public IActionResult GetWithComments()
-        {
-            var posts = _postRepository.GetAllWithComments();
-            return Ok(posts);
         }
     }
 }
