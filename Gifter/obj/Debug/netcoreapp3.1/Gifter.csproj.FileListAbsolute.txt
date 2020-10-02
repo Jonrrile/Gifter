@@ -43,3 +43,6 @@ C:\Users\Jonrr\workspace\Gifter\Gifter\obj\Debug\netcoreapp3.1\Gifter.csproj.Cop
 C:\Users\Jonrr\workspace\Gifter\Gifter\obj\Debug\netcoreapp3.1\Gifter.dll
 C:\Users\Jonrr\workspace\Gifter\Gifter\obj\Debug\netcoreapp3.1\Gifter.pdb
 C:\Users\Jonrr\workspace\Gifter\Gifter\obj\Debug\netcoreapp3.1\Gifter.genruntimeconfig.cache
+C:\Users\Jonrr\workspace\Gifter\Gifter\bin\Debug\netcoreapp3.1\Client\gifter\package-lock.json
+C:\Users\Jonrr\workspace\Gifter\Gifter\bin\Debug\netcoreapp3.1\Client\gifter\package.json
+C:\Users\Jonrr\workspace\Gifter\Gifter\bin\Debug\netcoreapp3.1\Client\gifter\public\manifest.json
