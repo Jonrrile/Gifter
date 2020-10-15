@@ -5130,6 +5130,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "Gifter >= 1.0.0",
       "Microsoft.Data.SqlClient >= 2.0.1"
     ]
   },
@@ -5158,7 +5159,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Jonrr\\workspace\\Gifter\\Gifter\\Gifter.csproj": {
+              "projectPath": "C:\\Users\\Jonrr\\workspace\\Gifter\\Gifter\\Gifter.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -5196,5 +5201,16 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1108",
+      "level": "Error",
+      "message": "Cycle detected. \r\n  Gifter -> Gifter.",
+      "libraryId": "Gifter",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }

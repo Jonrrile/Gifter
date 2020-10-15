@@ -11,6 +11,10 @@
   <ItemGroup>
     <Folder Include="Client\" />
   </ItemGroup>
+	
+	<ItemGroup>
+  <ProjectReference Include="..\Gifter\Gifter.csproj" />
+</ItemGroup>
 
 
 </Project>

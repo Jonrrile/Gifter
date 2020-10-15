@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "fojUK279Y6w0JHfEmGXDfGWUeg9k+7r13j0kupWnoFQNqXaDp37MgnCvQ5bbcl+DmNdB+Dl/ckyTv+xobxKNrQ==",
-  "success": true,
+  "dgSpecHash": "L2QdSAqeLveswMqIwU20GRGqvt3zM5ecn7rgrduiTx1R+643I+d6x2O4hlzEA3ucoNDjWcJ6B5O5Z6NZAJVd8Q==",
+  "success": false,
   "projectFilePath": "C:\\Users\\Jonrr\\workspace\\Gifter\\Gifter\\Gifter.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jonrr\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
@@ -83,5 +83,15 @@
     "C:\\Users\\Jonrr\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Jonrr\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1108",
+      "level": "Error",
+      "message": "Cycle detected. \r\n  Gifter -> Gifter.",
+      "libraryId": "Gifter",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }

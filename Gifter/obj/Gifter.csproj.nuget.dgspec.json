@@ -26,7 +26,11 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\Jonrr\\workspace\\Gifter\\Gifter\\Gifter.csproj": {
+                "projectPath": "C:\\Users\\Jonrr\\workspace\\Gifter\\Gifter\\Gifter.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
